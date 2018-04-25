@@ -40,13 +40,13 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
     <munit:test name="doc-test-exampleFlow-unit-Test_1" description="Unit Test case asserting scenario 1">
         <mock:when messageProcessor="mule:set-payload" doc:name="Mock">
             <mock:with-attributes>
-                <mock:with-attribute whereValue="#['Set Original Payload']" name="doc:name"/>
+                <mock:with-attribute name="doc:name" whereValue="#['Set Original Payload']"/>
             </mock:with-attributes>
             <mock:then-return payload="#[]"/>
         </mock:when>
         <mock:when messageProcessor="mule:flow" doc:name="Mock">
             <mock:with-attributes>
-                <mock:with-attribute whereValue="#['exampleFlow2']" name="name"/>
+                <mock:with-attribute name="name" whereValue="#['exampleFlow2']"/>
             </mock:with-attributes>
             <mock:then-return payload="#[]">
                 <mock:invocation-properties>
@@ -61,7 +61,7 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
     <munit:test name="doc-test-exampleFlow-unit-Test_2" description="Unit Test case asserting scenario 2">
         <mock:when messageProcessor="mule:set-payload" doc:name="Mock">
             <mock:with-attributes>
-                <mock:with-attribute whereValue="#['Set Original Payload']" name="doc:name"/>
+                <mock:with-attribute name="doc:name" whereValue="#['Set Original Payload']"/>
             </mock:with-attributes>
             <mock:then-return payload="#[]"/>
         </mock:when>

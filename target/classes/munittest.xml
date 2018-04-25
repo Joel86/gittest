@@ -43,6 +43,10 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     <sub-flow name="exampleSub_Flow1">
         <set-variable variableName="my_variable" value="#['var_value_1']" doc:name="my_variable"/>
     </sub-flow>
+    <flow name="munittestFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
+        <set-payload doc:name="Set Payload"/>
+    </flow>
 
     <sub-flow name="exampleSub_Flow2">
         <set-variable variableName="my_variable" value="#['var_value_2']" doc:name="my_variable"/>
